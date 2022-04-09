@@ -64,18 +64,18 @@ Silence never seems to bother either of them, so when she is quiet as she’s bu
 His smile to her now is just as warm and unaffected. Did he already know that she would bring this up now? Are you still thinking that we shouldn’t?
 /pause
 Yes. She says truthfully, searching for the right words—if there ever were any. Even with my grandfather’s insistence, I don’t see why we should.
-// pause, reveal below 
+/ pause, reveal below 
 And why is that?
-// pause, reveal below
+/ pause, reveal below
 What kind of question is that? There is no way he does not see what she always sees: the vast difference between them; a deep valley that separates where she stands from where he does. Must she spell it out to him, she thinks—feeling an unfamiliar frustration—is he not much older than her and therefore, should be much wiser than her? 
-// reveal below
+/ reveal below
 “I am simply not suited to be [[your wife.|Page10]]”
 
 :: Page10 
 Did someone tell you that?
 
 She does not need someone to tell her that, she thinks to say, but instead says, No. She knows what others think without having to ask, or what they would say if she did. How could someone like her be a match for someone like him? 
-// pause, reveal below 
+/ pause, reveal below 
 [[But don’t you think so?|Page11]]
 
 :: Page11 
@@ -224,7 +224,7 @@ Or would you rather leave the preparations to /other people?/
 
 Other people?
 
-My father and your grandfather—they never run out of people working for them, do they?
+My father and [[your grandfather|Page29]]—they never run out of people working for them, do they?
 
 :: Page29
 There is something in his voice that makes her assume that, once again, he knows that she has never asked her grandfather anything—and [[would not start asking now.|Page30]] (/this should only be clickable after clicking to pages 29.25, 29.50) Her grandfather, much like his father, came from a long political dynasty and, true to the nature of these people, cares about little else other than money and connections. He is a man who has never been defeated by life but once: when his favorite, and only, daughter—her mother—went off and married a nobody. She has always assumed that, more than losing her daughter, it is her grandfather’s injured pride that keeps him from showing mercy to her father; [[even long after her mother passed away|Page29.25]].
