@@ -1,0 +1,64 @@
+/* Your story will use the CSS in this passage to style the page.
+Give this passage more tags, and it will only affect passages with those tags.
+Example selectors: */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@100&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:wght@300&family=Work+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+tw-sidebar {
+	display: none;
+}
+#ui-bar {
+display:none
+}
+
+html{
+    font-size:150%;
+}
+
+body {
+	/* This affects the entire page */
+	background-color: #ebe8e1;
+    color: #2c2c2c;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+}
+
+h1 {
+
+    font-family: 'Playfair Display',serif;
+    font-size:6em;
+    line-height:100%;
+    font-weight:800;
+    letter-spacing:-0.05em;
+
+}
+
+hr {
+    background-color: #2c2c2c;
+}
+
+#story {
+    margin-left: 5em;
+    text-align: justify;
+    width: 60%;
+    display: block;
+    margin: auto;
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.passage {
+	/* This only affects passages */
+	font-size:1.2em;
+	  
+}
+
+.passage a {
+	font-weight:500;
+    color: #d6466a;
+	transition: all 0.3s ease-in-out;
+}
+.passage a:hover {
+	/* This affects links while the cursor is over them */
+	color: #2c2c2c;
+	
+}
