@@ -10,13 +10,12 @@
 one marriage for one lifetime 
 
 :: Start [mainmenu]
-<<fadein 1.5s 1.0s>><h1>one 
-marriage
-for one
-lifetime</h1><hr /><</fadein>>
+<h1><<fadein 1.5s 1.0s>>one<</fadein>> 
+<<fadein 1.5s 1.5s>>marriage<</fadein>>
+<<fadein 1.5s 2.0s>>for one<</fadein>>
+<<fadein 1.5s 2.5s>><font color="#b6366b">lifetime</font><</fadein>></h1><<fadein 1.5s 4.0s>><hr />
 
-<<fadein 1.5s 2.5s>>"one marriage for one lifetime" 
-is a piece of short fiction written by sas in 2019.
+one marriage for one lifetime" is a piece of short fiction written by sas in 2019.
 originally <<linkreplace "untitled,">>==untitled,== (at least. i saved it untitled. i'm so sorry if it was titled baby i couldn't find it in our texts! tell me what it is and i'll fix it asap!),<</linkreplace>> i selected a quote from the piece and titled it.
 
 [[about|About]]

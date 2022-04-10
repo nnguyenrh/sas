@@ -32,6 +32,10 @@ h1 {
 
 }
 
+/* h1:nth-child(1) {
+    color: #d6466a;
+} */
+
 hr {
     background-color: #2c2c2c;
 }
