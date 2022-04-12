@@ -153,7 +153,7 @@ hr {
 .passage {
 	/* This only affects passages */
 	font-size:1.2em;
-	  
+	line-height:210%;
 }
 
 .passage a {
@@ -165,7 +165,46 @@ hr {
 	/* This affects links while the cursor is over them */
 	color: #2c2c2c;
 	
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// fading-macro-set.min.js, for SugarCube 2, by Chapel
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "paginate.js" */
+function pagecounter(a, b) {
+    if(a != null) {
+        if(b == "previous") {
+            return "Page" + String(a - 1);
+        } else if(b == "next") {
+            return "Page" + String(a + 1);
+        } else {
+            return "";
+        }
+    } else {
+        return "";
+    }
+}
+
+setup.previouspage = function() {
+    const passages = State.passages;
+    const current_passage = passages[passages.length - 1];
+    if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
+        return "";
+    } else {
+        const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+        const previous_passage_int = current_passage_int - 1;
+        return pagecounter(current_passage_int,"previous");
+    }
+};
+
+setup.nextpage = function() {
+    const passages = State.passages;
+    const current_passage = passages[passages.length - 1];
+    if(passages.length < 2 || current_passage.substr(0,4) != "Page") {
+        return "";
+    } else {
+        const current_passage_int = parseInt(current_passage.substr(4, passages.length - 1));
+        const next_passage_int = current_passage_int + 1;
+        return pagecounter(current_passage_int,"next");
+    }
+};
+/* twine-user-script #2: "temp.js" */
+// fading-macro-set.min.js, for SugarCube 2, by Chapel
 // v1.1.0, 2021-04-20, 53d1a20e9321b3782a303cf7dbe00f5c51e947db
 ;Macro.add("fadein",{tags:null,handler:function(){var t,a,s=$(document.createElement("span")),e=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),a=this.args.length>1?Util.fromCssTime(this.args[1]):0,s.wiki(e).addClass("macro-"+this.name).appendTo(this.output).hide().delay(a).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,a,s=$(document.createElement("span")),e=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),a=this.args.length>1?Util.fromCssTime(this.args[1]):0,s.wiki(e).addClass("macro-"+this.name).appendTo(this.output).delay(a).fadeOut(t)}});
 // end fading-macro-set.min.js</script><tw-passagedata pid="1" name="Page11" tags="" position="100,100" size="100,100">I think you are perfectly suited to be my wife, if you want to. 
@@ -358,11 +397,17 @@ Even at work? She doesn’t know why this is the first thing she asks.
 
 Even at work. He says as retracts his hand. [[Would that be too much for you, Ame-san?|StoryEnds]]</tw-passagedata><tw-passagedata pid="42" name="StoryEnds" tags="" position="225,600" size="100,100">Shindou Ame shakes her head. 
 
-No. No it wouldn’t be, Seishirou-san.</tw-passagedata><tw-passagedata pid="43" name="Start" tags="mainmenu" position="350,600" size="100,100">&lt;h1&gt;&lt;&lt;fadein 1.5s 1.0s&gt;&gt;one&lt;&lt;/fadein&gt;&gt; 
+No. No it wouldn’t be, Seishirou-san.</tw-passagedata><tw-passagedata pid="43" name="Start" tags="mainmenu etc" position="350,600" size="100,100">&lt;h1&gt;&lt;&lt;fadein 1.5s 1.0s&gt;&gt;one&lt;&lt;/fadein&gt;&gt; 
 &lt;&lt;fadein 1.5s 1.5s&gt;&gt;marriage&lt;&lt;/fadein&gt;&gt;
 &lt;&lt;fadein 1.5s 2.0s&gt;&gt;for one&lt;&lt;/fadein&gt;&gt;
-&lt;&lt;fadein 1.5s 2.5s&gt;&gt;&lt;font color=&quot;#b6366b&quot;&gt;lifetime&lt;/font&gt;&lt;&lt;/fadein&gt;&gt;&lt;/h1&gt;&lt;&lt;fadein 1.5s 4.0s&gt;&gt;&lt;hr /&gt;
-
+&lt;&lt;fadein 1.5s 2.7s&gt;&gt;&lt;font color=&quot;#b6366b&quot;&gt;lifetime&lt;/font&gt;&lt;&lt;/fadein&gt;&gt;&lt;/h1&gt;&lt;&lt;fadein 1.5s 4.0s&gt;&gt;&lt;hr /&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;set $finished_reading to false&gt;&gt;&lt;&lt;set $show_pagination to false&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;nobr&gt;&gt;
+    &lt;&lt;widget &quot;pagination&quot;&gt;&gt; 
+    &lt;&lt;set $previouslink to setup.previouspage()&gt;&gt;
+    &lt;&lt;set $nextlink to setup.nextpage()&gt;&gt;
+        &lt;div style=&quot;text-align:center;&quot;&gt;[[⭠|$previouslink]] [[Menu]] [[🠖|$nextlink]]&lt;/div&gt;
+    &lt;&lt;/widget&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &quot;one marriage for one lifetime&quot; is a piece of short fiction written by sas in 2019.
 originally &lt;&lt;linkreplace &quot;untitled,&quot;&gt;&gt;==untitled,== (at least. i saved it untitled. i&#39;m so sorry if it was titled baby i couldn&#39;t find it in our texts! tell me what it is and i&#39;ll fix it asap!),&lt;&lt;/linkreplace&gt;&gt; i selected a quote from the piece and titled it.
 
@@ -373,12 +418,21 @@ originally &lt;&lt;linkreplace &quot;untitled,&quot;&gt;&gt;==untitled,== (at le
 
 
 
-&lt;&lt;back &quot;⭠&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="About" tags="etc" position="600,600" size="100,100">Hi baby, 
+&lt;&lt;nobr&gt;&gt;&lt;&lt;if $show_pagination is true&gt;&gt;&lt;&lt;pagination&gt;&gt;&lt;&lt;else&gt;&gt;[[Menu]]&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Menu" tags="etc" position="600,600" size="100,100">You can choose to &lt;&lt;link &quot;save or load&quot;&gt;&gt;&lt;&lt;run UI.saves()&gt;&gt;&lt;&lt;/link&gt;&gt; your progress here.
+You can also set whether or not you want a paged menu to appear as well.
+
+&lt;&lt;if $finished_reading is false&gt;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Since you haven&#39;t finished reading, it&#39;s suggested you keep pagination off. You may still turn it on if you find it useful.&lt;&lt;/if&gt;&gt;
+
+Show pagination is currently set to $show_pagination. &lt;&lt;if $show_pagination is true&gt;&gt; &lt;span id=&quot;page_off&quot;&gt;&lt;&lt;link &quot;Turn it off?&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;replace &quot;#page_off&quot; t8n&gt;&gt;&lt;&lt;set $show_pagination to false&gt;&gt;Turned pagination off.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;&lt;else&gt;&gt; &lt;span id=&quot;page_on&quot;&gt;&lt;&lt;link &quot;Turn it on?&quot;&gt;&gt;&lt;/span&gt;&lt;&lt;replace &quot;#page_on&quot; t8n&gt;&gt;&lt;&lt;set $show_pagination to true&gt;&gt;Turned pagination on.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;return &quot;Return to page?&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="About" tags="etc" position="725,600" size="100,100">Hi baby, 
 
 Happy birthday! There will be more on that in your &lt;&lt;linkreplace &quot;birthday card.&quot;&gt;&gt;birthday card, but you&#39;ll only be able to read it after you make it through the actual story. ;)&lt;&lt;/linkreplace&gt;&gt;
 
 &lt;&lt;linkreplace &quot;How should I read this?&quot;&gt;&gt;==How should I read this?==
-Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the birthday card, and the story one more time.&lt;&lt;/linkreplace&gt;&gt;
+Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the birthday card, and the story one more time.
+There is a menu at the bottom of each passage, but you should ideally click through using the links within the text.
+&lt;&lt;/linkreplace&gt;&gt;
 
 &lt;&lt;linkreplace &quot;What is this?&quot;&gt;&gt;==What is this?==
 This is a bit of a strange gift. It almost feels like a cop-out. I assure you it isn&#39;t. Weeks ago, after texting with Kai, I was trying to figure out what to get you for your birthday. I know you and Alice like personal gifts, so I decided to take a piece of writing that each of you had written and turn it into a &lt;&lt;linkreplace &quot;Twine game.&quot;&gt;&gt;Twine game. It&#39;s not really a game though, more like a visual novel.&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
@@ -392,7 +446,38 @@ For you specifically, I wanted to use this as a way to show you how I view your 
 
 I hope you enjoy!
 
-[[Return?|Start]]</tw-passagedata><tw-passagedata pid="46" name="Card" tags="etc" position="725,600" size="100,100">You&#39;ll be able to read your special birthday card once you&#39;ve passed through the thread. :) 
+[[Return?|Start]]</tw-passagedata><tw-passagedata pid="47" name="Card" tags="etc" position="850,600" size="100,100">&lt;&lt;if $finished_reading is false&gt;&gt;You&#39;ll be able to read your special birthday card once you&#39;ve passed through the thread. :)&lt;&lt;else&gt;&gt;
+
+Hi baby, happy birthday. :) 
+
+I hope you enjoyed this little gift I made for you. 
+
+A lot of things have happened over the past few months. And for a whole variety of reasons, it has not been easy to talk to you regularly the way that I used to in the years before. I hope you can forgive me for it. 
+
+I remember when Kai texted me a few weeks ago. He had all these plans for yours and Alice&#39;s birthday, some of which you have learned of by now, and others that you might be learning later today, or tonight, or tomorrow. Naturally I was trying to figure out what on earth I was going to give you. I remember, though, the gifts that left a deep impression on you, most of which are from Alice: a preserved flower you posted on your twitter (saw that before removing myself from the platform), perfumes that reminded them of your characters...
+
+I always thought that was really wonderful. I wondered if there was something I could give you both that would both be very personal to you each, and show how much I love you. I remember very vividly lying down at night, trying to figure out what that could be, and then I remembered the Twine environment I had set up on my work computer. How perfect, actually! With Kai&#39;s help, I was ready to have a Twine experience set up for Alice. 
+
+But for you, I had already envisioned what I would do. 
+
+I thought, first, of the oneshots you&#39;d written before, and I immediately remembered the piece you wrote between Seishirou and Ame. It had left such a strong impression on me that I can distinctly recall where I was when I was reading it--it was the morning right before I started work, and I had just finished running. You&#39;d just sent it to me, and I was reading it right before I got in the car, and it was really cool outside, and the skies were pink and very light blue. I remember being shocked by every word. I remember thinking I had to read it again once I drove home, because I wasn&#39;t giving it my full attention at the moment like I should have, but even then I felt the weight of each word so distinctly. Even revisiting this piece, I felt like I was learning more about you that I hadn&#39;t known at the time. 
+
+Sometimes, when an inexperienced writer like me puts things to words, it makes the thing a little cheaper. Or maybe a little less meaningful. I don&#39;t mean to talk down on myself...I&#39;m not a bad writer! But I know I am inexperienced, because I wasn&#39;t a child who wrote growing up (YES I understand this sounds really silly, but I TRULY believe this! Anyway, I was the kid that drew growing up, so that just makes my argument stronger). It feels a bit wrong for me to attempt to describe the feeling I had rereading your work now, and reading it several years ago, on that brisk morning. If I could attempt to describe it while also respecting the fact that I won&#39;t describe it as accurately as I would like, it would just be that. I was learning more about you. 
+
+And I have always wanted to learn more about you, ever since I read your writing on Haven. And even then, your writing left a distinct impression on me. I was in high school, and it was during winter break. I think it was the day before christmas eve. Derek was playing Borderlands 2 on our TV, and I was sitting on my old macbook air, and I was reading a thread about Akira. I was kind of just rummaging through the forum, trying to see if there was more about Akira I could read about. I read a thread that ended with her at a hospital, I think, and looking out through the window on new year&#39;s eve. I kept looking for more threads about her because I wanted to know who she was. And I started going through the characters you had then, because it turned into me wanting to know who YOU were. Then we started writing together after that, and everything kind of just unfoled from there. 
+
+It has been a great privilege to be able to write with you, and learn more and more about you every single day. To have read all the things you have written, and learn about who you are in the process. I didn&#39;t get to grow up with you as a best friend. Little Nhi always really wanted a childhood best friend, but ya know, some things just don&#39;t happen in your childhood that everyone else always seems to get. In an alternate universe, I like to think that we were childhood friends! But in this universe, the writing we have shared with each other, and the writing we have read from each other is all that we have to make up for the fact that I didn&#39;t get to grow up alongside you, and that I STILL haven&#39;t moved to Singapore (but I will one day! As I&#39;ve discussed with you before) or really anywhere that would bring me closer to you yet. 
+
+Now this birthday letter is starting to get so long that it probably deserves a twine game all on its own! I just wanted to tell you that I love you so much, like I&#39;ve always loved you, and I hope this gift gives you a glimpse of how deeply I do, and how wonderful you are to me. If you can&#39;t see that on your own, I hope that this was able to guide your eyes somewhat.
+
+If you&#39;re curious as to how Alice&#39;s gift looks, you can view it [[here|https://nnguyenrh.github.io/alice/]]! Theirs is quite similar, but instead of a piece of short fiction, it&#39;s a thread they loved on Natura. You and Kai&#39;s writing has been included there too, so definitely go check it out. 
+
+I had so much fun putting your Twine games together! Thank you so much for reading them!
+Let&#39;s talk soon baby. I probably haven&#39;t been able to talk to you much this week because Rhys suddenly came home, but I&#39;ll certainly have checked in with you throughout the week. :) 
+
+See you!!!
+- Nhi
+&lt;&lt;/if&gt;&gt;
 
 [[Return?|Start]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
