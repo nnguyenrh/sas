@@ -53,7 +53,7 @@ hr {
 .passage {
 	/* This only affects passages */
 	font-size:1.2em;
-	  
+	line-height:210%;
 }
 
 .passage a {

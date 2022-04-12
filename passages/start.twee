@@ -9,12 +9,18 @@
 :: StoryTitle 
 one marriage for one lifetime 
 
-:: Start [mainmenu]
+:: Start [mainmenu etc]
 <h1><<fadein 1.5s 1.0s>>one<</fadein>> 
 <<fadein 1.5s 1.5s>>marriage<</fadein>>
 <<fadein 1.5s 2.0s>>for one<</fadein>>
-<<fadein 1.5s 2.5s>><font color="#b6366b">lifetime</font><</fadein>></h1><<fadein 1.5s 4.0s>><hr />
-
+<<fadein 1.5s 2.7s>><font color="#b6366b">lifetime</font><</fadein>></h1><<fadein 1.5s 4.0s>><hr />
+<<nobr>><<set $finished_reading to false>><<set $show_pagination to false>><</nobr>><<nobr>>
+    <<widget "pagination">> 
+    <<set $previouslink to setup.previouspage()>>
+    <<set $nextlink to setup.nextpage()>>
+        <div style="text-align:center;">[[⭠|$previouslink]] [[Menu]] [[🠖|$nextlink]]</div>
+    <</widget>>
+<</nobr>>
 "one marriage for one lifetime" is a piece of short fiction written by sas in 2019.
 originally <<linkreplace "untitled,">>==untitled,== (at least. i saved it untitled. i'm so sorry if it was titled baby i couldn't find it in our texts! tell me what it is and i'll fix it asap!),<</linkreplace>> i selected a quote from the piece and titled it.
 
@@ -28,7 +34,17 @@ originally <<linkreplace "untitled,">>==untitled,== (at least. i saved it untitl
 
 
 
-<<back "⭠">><</if>>
+<<nobr>><<if $show_pagination is true>><<pagination>><<else>>[[Menu]]<</if>><</nobr>><</if>>
+
+:: Menu [etc]
+You can choose to <<link "save or load">><<run UI.saves()>><</link>> your progress here.
+You can also set whether or not you want a paged menu to appear as well.
+
+<<if $finished_reading is false>><strong>Note:</strong> Since you haven't finished reading, it's suggested you keep pagination off. You may still turn it on if you find it useful.<</if>>
+
+Show pagination is currently set to $show_pagination. <<if $show_pagination is true>> <span id="page_off"><<link "Turn it off?">></span><<replace "#page_off" t8n>><<set $show_pagination to false>>Turned pagination off.<</replace>><</link>> <<else>> <span id="page_on"><<link "Turn it on?">></span><<replace "#page_on" t8n>><<set $show_pagination to true>>Turned pagination on.<</replace>><</link>><</if>>
+
+<<return "Return to page?">>
 
 
 :: About [etc]
@@ -37,7 +53,9 @@ Hi baby,
 Happy birthday! There will be more on that in your <<linkreplace "birthday card.">>birthday card, but you'll only be able to read it after you make it through the actual story. ;)<</linkreplace>>
 
 <<linkreplace "How should I read this?">>==How should I read this?==
-Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the birthday card, and the story one more time.<</linkreplace>>
+Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the birthday card, and the story one more time.
+There is a menu at the bottom of each passage, but you should ideally click through using the links within the text.
+<</linkreplace>>
 
 <<linkreplace "What is this?">>==What is this?==
 This is a bit of a strange gift. It almost feels like a cop-out. I assure you it isn't. Weeks ago, after texting with Kai, I was trying to figure out what to get you for your birthday. I know you and Alice like personal gifts, so I decided to take a piece of writing that each of you had written and turn it into a <<linkreplace "Twine game.">>Twine game. It's not really a game though, more like a visual novel.<</linkreplace>><</linkreplace>>
@@ -54,6 +72,37 @@ I hope you enjoy!
 [[Return?|Start]]
 
 :: Card [etc]
-You'll be able to read your special birthday card once you've passed through the thread. :) 
+<<if $finished_reading is false>>You'll be able to read your special birthday card once you've passed through the thread. :)<<else>>
+
+Hi baby, happy birthday. :) 
+
+I hope you enjoyed this little gift I made for you. 
+
+A lot of things have happened over the past few months. And for a whole variety of reasons, it has not been easy to talk to you regularly the way that I used to in the years before. I hope you can forgive me for it. 
+
+I remember when Kai texted me a few weeks ago. He had all these plans for yours and Alice's birthday, some of which you have learned of by now, and others that you might be learning later today, or tonight, or tomorrow. Naturally I was trying to figure out what on earth I was going to give you. I remember, though, the gifts that left a deep impression on you, most of which are from Alice: a preserved flower you posted on your twitter (saw that before removing myself from the platform), perfumes that reminded them of your characters...
+
+I always thought that was really wonderful. I wondered if there was something I could give you both that would both be very personal to you each, and show how much I love you. I remember very vividly lying down at night, trying to figure out what that could be, and then I remembered the Twine environment I had set up on my work computer. How perfect, actually! With Kai's help, I was ready to have a Twine experience set up for Alice. 
+
+But for you, I had already envisioned what I would do. 
+
+I thought, first, of the oneshots you'd written before, and I immediately remembered the piece you wrote between Seishirou and Ame. It had left such a strong impression on me that I can distinctly recall where I was when I was reading it--it was the morning right before I started work, and I had just finished running. You'd just sent it to me, and I was reading it right before I got in the car, and it was really cool outside, and the skies were pink and very light blue. I remember being shocked by every word. I remember thinking I had to read it again once I drove home, because I wasn't giving it my full attention at the moment like I should have, but even then I felt the weight of each word so distinctly. Even revisiting this piece, I felt like I was learning more about you that I hadn't known at the time. 
+
+Sometimes, when an inexperienced writer like me puts things to words, it makes the thing a little cheaper. Or maybe a little less meaningful. I don't mean to talk down on myself...I'm not a bad writer! But I know I am inexperienced, because I wasn't a child who wrote growing up (YES I understand this sounds really silly, but I TRULY believe this! Anyway, I was the kid that drew growing up, so that just makes my argument stronger). It feels a bit wrong for me to attempt to describe the feeling I had rereading your work now, and reading it several years ago, on that brisk morning. If I could attempt to describe it while also respecting the fact that I won't describe it as accurately as I would like, it would just be that. I was learning more about you. 
+
+And I have always wanted to learn more about you, ever since I read your writing on Haven. And even then, your writing left a distinct impression on me. I was in high school, and it was during winter break. I think it was the day before christmas eve. Derek was playing Borderlands 2 on our TV, and I was sitting on my old macbook air, and I was reading a thread about Akira. I was kind of just rummaging through the forum, trying to see if there was more about Akira I could read about. I read a thread that ended with her at a hospital, I think, and looking out through the window on new year's eve. I kept looking for more threads about her because I wanted to know who she was. And I started going through the characters you had then, because it turned into me wanting to know who YOU were. Then we started writing together after that, and everything kind of just unfoled from there. 
+
+It has been a great privilege to be able to write with you, and learn more and more about you every single day. To have read all the things you have written, and learn about who you are in the process. I didn't get to grow up with you as a best friend. Little Nhi always really wanted a childhood best friend, but ya know, some things just don't happen in your childhood that everyone else always seems to get. In an alternate universe, I like to think that we were childhood friends! But in this universe, the writing we have shared with each other, and the writing we have read from each other is all that we have to make up for the fact that I didn't get to grow up alongside you, and that I STILL haven't moved to Singapore (but I will one day! As I've discussed with you before) or really anywhere that would bring me closer to you yet. 
+
+Now this birthday letter is starting to get so long that it probably deserves a twine game all on its own! I just wanted to tell you that I love you so much, like I've always loved you, and I hope this gift gives you a glimpse of how deeply I do, and how wonderful you are to me. If you can't see that on your own, I hope that this was able to guide your eyes somewhat.
+
+If you're curious as to how Alice's gift looks, you can view it [[here|https://nnguyenrh.github.io/alice/]]! Theirs is quite similar, but instead of a piece of short fiction, it's a thread they loved on Natura. You and Kai's writing has been included there too, so definitely go check it out. 
+
+I had so much fun putting your Twine games together! Thank you so much for reading them!
+Let's talk soon baby. I probably haven't been able to talk to you much this week because Rhys suddenly came home, but I'll certainly have checked in with you throughout the week. :) 
+
+See you!!!
+- Nhi
+<</if>>
 
 [[Return?|Start]]
