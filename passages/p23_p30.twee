@@ -45,37 +45,37 @@
 <<fadein 1.5s 4.5s>>[[Will you marry me?|Page28]]<</fadein>>
 
 :: Page28
-The question, though expected, still makes her ears red. She only nods, because suddenly she finds it hard to breathe, let alone speak; and the doctor, smiling handsomely as ever, pulls the ring out and slides it into her ring finger with such trained precision that makes her think he has done this more than once. Other patrons who witness them <<linkreplace "start clapping politely,">>start clapping politely—why would they do that?—<</linkreplace>> and later, a waiter brings out a small dessert with small candles on them, citing that this is on the house before congratulating them.
+<<fadein 1.5s>>The question, though expected, still makes her ears red. She only nods, because suddenly she finds it hard to breathe, let alone speak; and the doctor, smiling handsomely as ever, pulls the ring out and slides it into her ring finger with such trained precision that makes her think he has done this more than once. Other patrons who witness them <<linkreplace "start clapping politely,">>start clapping politely—why would they do that?—<</linkreplace>> and later, a waiter brings out a small dessert with small candles on them, citing that this is on the house before congratulating them.<</fadein>>
 
-What a lucky bride, <<linkreplace "the waiter says.">> the waiter says; and without skipping a beat, the doctor says, I’m the lucky one. 
+<<fadein 1.5s 3.0s>>What a lucky bride, <<linkreplace "the waiter says.">> the waiter says; and without skipping a beat, the doctor says, I’m the lucky one. 
 
-For once, she actually [[agrees with him.|Page28]]<</linkreplace>>
+For once, she actually [[agrees with him.|Page28]]<</linkreplace>><</fadein>>
 
 :: Page29
 
-I’ll call my father to inform him our decision. His smile widens slightly. My sister will be so happy when we tell her. I’m sure she is more than happy to help us with the preparations. We should be able to take some off days here and there to take care of everything.”
+<<fadein 1.5s>>I’ll call my father to inform him our decision. His smile widens slightly. My sister will be so happy when we tell her. I’m sure she is more than happy to help us with the preparations. We should be able to take some off days here and there to take care of everything.”<</fadein>>
 
-This surprises her, though it should not have. 
+<<fadein 1.5s 3.0s>>This surprises her, though it should not have. <</fadein>>
 
-You would go that far?
+<<fadein 1.5s 4.5s>>You would go that far?<</fadein>>
 
-That’s not far at all. Though I don’t know where to start. /Maybe a wedding dress?/
+<<fadein 1.5s 6.0s>>That’s not far at all. Though I don’t know where to start. <<linkreplace "Maybe a wedding dress?">>Maybe a wedding dress?
 
-She looks down at the thin layer of melting ice in her untouched lemonade, trying hard to ignore the new ring on her finger. She has a feeling that he knows she does not have any other friends she could go to about these things. Her aloneness is not a choice; nevertheless friendships never last with her, despite her best efforts. There has only been one lasting friendship with the doctor’s sister—but could she even call it that, when she has been harboring one-sided feelings for so long? It bothers her too that he seems to know; even though she is rarely bothered by anything. But with ease, he, like a drop of water, creates ripples in the ever calm surface of her heart. 
+She looks down at the thin layer of melting ice in her untouched lemonade, trying hard to ignore the new ring on her finger. She has a feeling that he knows she does not have <<linkreplace "any other friends.">>any other friends she could go to about these things. Her aloneness is not a choice; nevertheless friendships never last with her, despite her best efforts. There has only been one lasting <<linkreplace "friendship with the doctor’s sister.">>friendship with the doctor’s sister—but could she even call it that, when she has been harboring one-sided feelings for so long? It bothers her too that he seems to know; even though she is rarely bothered by anything. But with ease, he, like a drop of water, creates ripples in the ever calm surface of her heart. 
 
-[[I wouldn’t know what’s good.|Page30]]
+[[I wouldn’t know what’s good.|Page30]]<</linkreplace>><</linkreplace>><</fadein>><</linkreplace>>
 
 :: Page30
 
-These kinds of things can be figured out together as we go along. 
+<<fadein 1.5s>>These kinds of things can be figured out together as we go along.<</fadein>>
 
-He says again with his empty gentleness. 
+<<fadein 1.5s 3.0s>>He says again with his empty gentleness.<</fadein>>
 
-Or would you rather leave the preparations to /other people?/
+<<fadein 1.5s 4.5s>>Or would you rather leave the preparations to other people?<</fadein>>
 
-Other people?
+<<fadein 1.5s 6.0s>><<linkreplace "Other people?">>Other people?
 
-My father and [[your grandfather|Page31]]—they never run out of people working for them, do they?
+My father and [[your grandfather|Page31]]—they never run out of people working for them, do they?<</linkreplace>><</fadein>>
 
 :: Page31
 There is something in his voice that makes her assume that, once again, he knows that she has never asked her grandfather anything—and [[would not start asking now.|Page35]] 

@@ -29,7 +29,7 @@ originally <<linkreplace "untitled,">>==untitled,== (at least. i saved it untitl
 
 [[about|About]]
 [[read|Page1]]
-[[birthday card|Card]]
+[[card|Card]]
 <</fadein>>
 
 :: PassageFooter 
@@ -53,15 +53,15 @@ Show pagination is currently set to $show_pagination. <<if $show_pagination is t
 :: About [etc]
 Hi baby, 
 
-Happy birthday! There will be more on that in your <<linkreplace "birthday card.">>birthday card, but you'll only be able to read it after you make it through the actual story. ;)<</linkreplace>>
+Today's friend's day! There will be more on that in your <<linkreplace "card.">>card, but you'll only be able to read it after you make it through the actual story. ;)<</linkreplace>>
 
 <<linkreplace "How should I read this?">>==How should I read this?==
-Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the birthday card, and the story one more time.
+Ideally twice! I imagine reading the about page (where you are right now), the story you wrote, the card, and the story one more time.
 There is a menu at the bottom of each passage, but you should ideally click through using the links within the text.
 <</linkreplace>>
 
 <<linkreplace "What is this?">>==What is this?==
-This is a bit of a strange gift. It almost feels like a cop-out. I assure you it isn't. Weeks ago, after texting with Kai, I was trying to figure out what to get you for your birthday. I know you and Alice like personal gifts, so I decided to take a piece of writing that each of you had written and turn it into a <<linkreplace "Twine game.">>Twine game. It's not really a game though, more like a visual novel.<</linkreplace>><</linkreplace>>
+This is a bit of a strange gift. It almost feels like a cop-out. I assure you it isn't. Weeks ago, after texting with Kai, I was trying to figure out what to get you. I know you and Alice like personal gifts, so I decided to take a piece of writing that each of you had written and turn it into a <<linkreplace "Twine game.">>Twine game. It's not really a game though, more like a visual novel.<</linkreplace>><</linkreplace>>
 
 <<linkreplace "Why did you make this?">>==Why did you make this?==
 I just wanted each of you to have a place where you could revisit <<linkreplace "one of your favorite pieces of writing.">>one of your favorite pieces of writing.
@@ -75,15 +75,15 @@ I hope you enjoy!
 [[Return?|Start]]
 
 :: Card [etc]
-<<if $finished_reading is false>>You'll be able to read your special birthday card once you've passed through the thread. :)<<else>>
+<<if $finished_reading is false>>You'll be able to read your special card once you've passed through the thread. :)<<else>>
 
-Hi baby, happy birthday. :) 
+Hi baby :)
 
 I hope you enjoyed this little gift I made for you. 
 
 A lot of things have happened over the past few months. And for a whole variety of reasons, it has not been easy to talk to you regularly the way that I used to in the years before. I hope you can forgive me for it. 
 
-I remember when Kai texted me a few weeks ago. He had all these plans for yours and Alice's birthday, some of which you have learned of by now, and others that you might be learning later today, or tonight, or tomorrow. Naturally I was trying to figure out what on earth I was going to give you. I remember, though, the gifts that left a deep impression on you, most of which are from Alice: a preserved flower you posted on your twitter (saw that before removing myself from the platform), perfumes that reminded them of your characters...
+I remember when Kai texted me a few weeks ago. He had all these plans for you and Alice, some of which you have learned of by now, and others that you might be learning later today, or tonight, or tomorrow. Naturally I was trying to figure out what on earth I was going to give to you. I remember, though, the gifts that left a deep impression on you, most of which are from Alice: a preserved flower you posted on your twitter (saw that before removing myself from the platform), perfumes that reminded them of your characters...
 
 I always thought that was really wonderful. I wondered if there was something I could give you both that would both be very personal to you each, and show how much I love you. I remember very vividly lying down at night, trying to figure out what that could be, and then I remembered the Twine environment I had set up on my work computer. How perfect, actually! With Kai's help, I was ready to have a Twine experience set up for Alice. 
 
@@ -97,7 +97,7 @@ And I have always wanted to learn more about you, ever since I read your writing
 
 It has been a great privilege to be able to write with you, and learn more and more about you every single day. To have read all the things you have written, and learn about who you are in the process. I didn't get to grow up with you as a best friend. Little Nhi always really wanted a childhood best friend, but ya know, some things just don't happen in your childhood that everyone else always seems to get. In an alternate universe, I like to think that we were childhood friends! But in this universe, the writing we have shared with each other, and the writing we have read from each other is all that we have to make up for the fact that I didn't get to grow up alongside you, and that I STILL haven't moved to Singapore (but I will one day! As I've discussed with you before) or really anywhere that would bring me closer to you yet. 
 
-Now this birthday letter is starting to get so long that it probably deserves a twine game all on its own! I just wanted to tell you that I love you so much, like I've always loved you, and I hope this gift gives you a glimpse of how deeply I do, and how wonderful you are to me. If you can't see that on your own, I hope that this was able to guide your eyes somewhat.
+Now this letter is starting to get so long that it probably deserves a twine game all on its own! I just wanted to tell you that I love you so much, like I've always loved you, and I hope this gift gives you a glimpse of how deeply I do, and how wonderful you are to me. If you can't see that on your own, I hope that this was able to guide your eyes somewhat.
 
 If you're curious as to how Alice's gift looks, you can view it [[here|https://nnguyenrh.github.io/alice/]]! Theirs is quite similar, but instead of a piece of short fiction, it's a thread they loved on Natura. You and Kai's writing has been included there too, so definitely go check it out. 
 
