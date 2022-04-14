@@ -6,6 +6,9 @@
     "start": "Start"
 }
 
+:: StoryInit
+<<set $finished_reading to false>><<set $show_pagination to false>><<set $finished_grandfather_passage to false>>
+
 :: StoryTitle 
 one marriage for one lifetime 
 
@@ -14,7 +17,7 @@ one marriage for one lifetime
 <<fadein 1.5s 1.5s>>marriage<</fadein>>
 <<fadein 1.5s 2.0s>>for one<</fadein>>
 <<fadein 1.5s 2.7s>><font color="#b6366b">lifetime</font><</fadein>></h1><<fadein 1.5s 4.0s>><hr />
-<<nobr>><<set $finished_reading to false>><<set $show_pagination to false>><</nobr>><<nobr>>
+<<nobr>><</nobr>><<nobr>>
     <<widget "pagination">> 
     <<set $previouslink to setup.previouspage()>>
     <<set $nextlink to setup.nextpage()>>
