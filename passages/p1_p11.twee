@@ -29,9 +29,9 @@ Immediately at work, hundreds of eyes were turned to her; some were even confuse
 <<fadein 1.5s>>But perhaps he has a hand on this, too. Have there been any troubles at work, he once asked in one of their meetings, and she told him the truth that there hasn’t. He smiled then, in such a way that it made her wonder if he did something in the background to make sure she would not have [[any problems.|Page7]]<</fadein>>
 
 :: Page7
-<<fadein 1.5s 3.0s>>That night, he yet again invites her out to dinner. She often turned him down, saying her father was waiting or lying that she had work to do, but this has never dampened him in the least.<</fadein>> 
+<<fadein 1.5s>>That night, he yet again invites her out to dinner. She often turned him down, saying her father was waiting or lying that she had work to do, but this has never dampened him in the least.<</fadein>> 
 
-<<fadein 1.5s 4.5s>>She accepted his invitation tonight merely because she felt that their strange relation—neither friends nor lovers—could not continue any further. And yet when they arrive at the fancy but quiet restaurant that she would have never chosen for herself because she wouldn’t be able to afford it, she realizes she has no idea where this relation could continue—or if it could end [[only because she wants it to.|Page8]]<</fadein>>
+<<fadein 1.5s 3.0s>>She accepted his invitation tonight merely because she felt that their strange relation—neither friends nor lovers—could not continue any further. And yet when they arrive at the fancy but quiet restaurant that she would have never chosen for herself because she wouldn’t be able to afford it, she realizes she has no idea where this relation could continue—or if it could end [[only because she wants it to.|Page8]]<</fadein>>
 
 :: Page8 
 <<fadein 1.5s>>Their dinner goes as usual; with him doing most of the talking, but not too much that it makes him seem self-absorbed. When their plates are cleared, he orders a cup of coffee, and she asks for a glass of lemonade. The waiters and waitresses smile a lot, mostly to him. She wonders what they appear to them—a thin and plain girl, gloomy even—dining out with a man so clearly [[out of her league.|Page9]]<</fadein>>
@@ -48,13 +48,13 @@ Immediately at work, hundreds of eyes were turned to her; some were even confuse
 
 <<fadein 1.5s 5.0s>><<linkreplace "Yes.">>Yes. She says truthfully, searching for the right words—if there ever were any.<</linkreplace>><</fadein>>
 
-<<fadein 1.5s 7.0s>>Even with my grandfather’s insistence, I don’t see why we should.<</fadein>>
+<<fadein 1.5s 8.0s>>Even with my grandfather’s insistence, I don’t see why we should.<</fadein>>
 
-<<fadein 1.5s 9.0s>>And why is that?<</fadein>>
+<<fadein 1.5s 11.5s>>And why is that?<</fadein>>
 
-<<fadein 1.5s 11.0s>>What kind of question is that? There is no way he does not see what she always sees: the vast difference between them; a deep valley that separates where she stands from where he does. Must she spell it out to him, she thinks—feeling an unfamiliar frustration—is he not much older than her and therefore much wiser than her?<</fadein>>
+<<fadein 1.5s 14.5s>><<linkreplace "What kind of question is that?">>What kind of question is that? There is no way he does not see what she always sees: the vast difference between them; a deep valley that separates where she stands from where he does. Must she spell it out to him, she thinks—feeling an unfamiliar frustration—is he not much older than her and therefore much wiser than her?<</linkreplace>><</fadein>>
 
-<<fadein 1.5s 13s>>“I am simply not suited to be [[your wife.|Page11]]”<</fadein>>
+<<fadein 1.5s 19s>>“I am simply not suited to be [[your wife.|Page11]]”<</fadein>>
 
 :: Page11
 <<fadein 1.5s>>Did someone tell you that?<</fadein>>
